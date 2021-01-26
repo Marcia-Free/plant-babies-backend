@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     
-    def def index
+    def index
         @users = User.all
         render json: @users
     end
@@ -47,7 +47,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:user_name)
     end
-end
-
-    
 end
