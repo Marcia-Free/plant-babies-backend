@@ -7,6 +7,7 @@ class PlantsController < ApplicationController
     
 
     def show
+        set_plant
         render json: @plant
     end
 
@@ -32,7 +33,8 @@ class PlantsController < ApplicationController
 
 
     def destroy
-        @plant.destroy
+      set_plant
+      @plant.destroy
     end
 
 

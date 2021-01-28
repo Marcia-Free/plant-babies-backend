@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     
 
     def show
+      set_user
         render json: @user
     end
 
@@ -32,6 +33,7 @@ class UsersController < ApplicationController
 
 
     def destroy
+      set_user
         @user.destroy
     end
 
